@@ -26,6 +26,3 @@ Animal::~Animal(void) { std::cout << "Animal virtual destructor called\n"; }
 
 // Other methods
 std::string const &Animal::getType() const { return type; }
-void Animal::makeSound() const {
-    std::cout << "Animal makes ear-splitting noise.\n";
-}

@@ -6,7 +6,6 @@
 Cat::Cat(void) : Animal("Cat"), brain(new Brain) {
     std::cout << "Cat constructor called\n";
 }
-
 Cat::Cat(Cat const &other) : Animal(other), brain(new Brain(*other.brain)) {
     std::cout << "Cat copy constructor called\n";
 }

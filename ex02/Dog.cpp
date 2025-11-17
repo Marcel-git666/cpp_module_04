@@ -3,12 +3,14 @@
 #include <iostream>
 
 // Orthodox Canonical Form
-Dog::Dog(void) : Animal("Dog"), brain(new Brain) {
+Dog::Dog(void) : Animal() {
+    type = "Dog";
+    brain = new Brain;
     std::cout << "Dog constructor called\n";
 }
-
-Dog::Dog(Dog const &other) : Animal(other), brain(new Brain(*other.brain)) {
+Dog::Dog(Dog const &other) : Animal(other) {
     std::cout << "Dog copy constructor called\n";
+    brain = new Brain(*other.brain);
 }
 
 Dog &Dog::operator=(Dog const &other) {
