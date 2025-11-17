@@ -1,0 +1,32 @@
+#include "Cat.hpp"
+#include "Brain.hpp"
+#include <iostream>
+
+// Orthodox Canonical Form
+Cat::Cat(void) : Animal() {
+    type = "Cat";
+    brain = new Brain;
+    std::cout << "Cat constructor called\n";
+}
+Cat::Cat(Cat const &other) : Animal(other) {
+    std::cout << "Cat copy constructor called\n";
+    brain = new Brain(*other.brain);
+}
+
+Cat &Cat::operator=(Cat const &other) {
+    std::cout << "Cat copy asignment operator called\n";
+    if (this != &other) {
+        Animal::operator=(other);
+        delete brain;
+        brain = new Brain(*other.brain);
+    }
+    return *this;
+}
+
+Cat::~Cat(void) {
+    std::cout << "Cat virtual destructor called\n";
+    delete brain;
+}
+
+// Other methods
+void Cat::makeSound() const { std::cout << "Cat meows silently!\n"; }

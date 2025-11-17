@@ -1,0 +1,32 @@
+#include "Dog.hpp"
+#include "Brain.hpp"
+#include <iostream>
+
+// Orthodox Canonical Form
+Dog::Dog(void) : Animal() {
+    type = "Dog";
+    brain = new Brain;
+    std::cout << "Dog constructor called\n";
+}
+Dog::Dog(Dog const &other) : Animal(other) {
+    std::cout << "Dog copy constructor called\n";
+    brain = new Brain(*other.brain);
+}
+
+Dog &Dog::operator=(Dog const &other) {
+    std::cout << "Dog copy asignment operator called\n";
+    if (this != &other) {
+        Animal::operator=(other);
+        delete brain;
+        brain = new Brain(*other.brain);
+    }
+    return *this;
+}
+
+Dog::~Dog(void) {
+    std::cout << "Dog virtual destructor called\n";
+    delete brain;
+}
+
+// Other methods
+void Dog::makeSound() const { std::cout << "Dog barks like mad!\n"; }
