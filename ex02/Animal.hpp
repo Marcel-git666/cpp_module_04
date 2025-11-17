@@ -6,12 +6,11 @@
 class Animal {
   protected:
     std::string type;
+    Animal(void);
+    Animal(Animal const &other);
     explicit Animal(std::string type);
 
   public:
-    // Orthodox Canonical Form
-    Animal(void);
-    Animal(Animal const &other);
     Animal &operator=(Animal const &other);
     virtual ~Animal(void);
 
