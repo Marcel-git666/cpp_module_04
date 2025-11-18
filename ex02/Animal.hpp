@@ -9,9 +9,9 @@ class Animal {
     Animal(void);
     Animal(Animal const &other);
     explicit Animal(std::string type);
+    Animal &operator=(Animal const &other);
 
   public:
-    Animal &operator=(Animal const &other);
     virtual ~Animal(void);
 
     // Other methods
