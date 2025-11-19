@@ -20,5 +20,6 @@ int main() {
     delete bob;
     delete me;
     delete src;
+    deleteDroppedMaterias();
     return 0;
 }
