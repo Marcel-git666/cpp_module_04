@@ -11,7 +11,9 @@ MateriaSource::MateriaSource() {
 }
 
 MateriaSource::MateriaSource(MateriaSource const &other) {
+#if DEBUG
     std::cout << "MateriaSource copy constructor called\n";
+#endif
     for (int i = 0; i < 4; i++) {
         spellbook[i] = NULL;
     }
@@ -23,7 +25,9 @@ MateriaSource::MateriaSource(MateriaSource const &other) {
 }
 
 MateriaSource &MateriaSource::operator=(MateriaSource const &other) {
+#if DEBUG
     std::cout << "MateriaSource copy asignment operator called\n";
+#endif
 
     if (this != &other) {
         for (int i = 0; i < 4; i++) {

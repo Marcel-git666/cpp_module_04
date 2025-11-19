@@ -6,8 +6,11 @@ NAME = a.out
 # The compiler
 CC = c++
 
+# 0 = silent mode, 1 = verbose mode
+DEBUG_MODE = 0
+
 # Compiler flags as per the subject requirements
-CFLAGS = -Wall -Wextra -Werror -std=c++98
+CFLAGS = -Wall -Wextra -Werror -std=c++98 -DDEBUG=$(DEBUG_MODE)
 
 # === Directories ===
 
@@ -24,7 +27,8 @@ SRCS = main.cpp Cure.cpp Ice.cpp Character.cpp AMateria.cpp MateriaSource.cpp
 
 
 # List of all header (.hpp) files for dependency tracking
-HEADERS = Cure.hpp Ice.hpp ICharacter.hpp Character.hpp AMateria.hpp MateriaSource.hpp, IMateriaSource.hpp \
+HEADERS = Cure.hpp Ice.hpp ICharacter.hpp Character.hpp AMateria.hpp MateriaSource.hpp \
+		IMateriaSource.hpp
 
 
 # Generate the list of object files from the source files

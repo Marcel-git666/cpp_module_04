@@ -13,7 +13,9 @@ AMateria::~AMateria(void) {}
 
 // Other methods
 AMateria::AMateria(std::string const &type) : type(type) {
+#if DEBUG
     std::cout << "AMateria constructor called with type: " << type << "\n";
+#endif
 }
 std::string const &AMateria::getType() const { return type; }
 

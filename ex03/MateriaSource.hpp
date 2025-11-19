@@ -9,7 +9,7 @@ class MateriaSource : public IMateriaSource {
     MateriaSource(void);
     MateriaSource(MateriaSource const &other);
     MateriaSource &operator=(MateriaSource const &other);
-    virtual ~MateriaSource() {}
+    virtual ~MateriaSource();
 
     virtual void learnMateria(AMateria *m);
     virtual AMateria *createMateria(std::string const &type);

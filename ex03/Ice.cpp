@@ -2,21 +2,33 @@
 #include "AMateria.hpp"
 #include "ICharacter.hpp"
 
-Ice::Ice(void) : AMateria("ice") { std::cout << "Ice constructor called\n"; }
+Ice::Ice(void) : AMateria("ice") {
+#if DEBUG
+    std::cout << "Ice constructor called\n";
+#endif
+}
 
 Ice::Ice(Ice const &other) : AMateria(other) {
+#if DEBUG
     std::cout << "Ice copy constructor called\n";
+#endif
 }
 
 Ice &Ice::operator=(Ice const &other) {
+#if DEBUG
     std::cout << "Ice copy asignment operator called\n";
+#endif
     if (this != &other) {
         AMateria::operator=(other);
     }
     return *this;
 }
 
-Ice::~Ice(void) { std::cout << "Ice destructor called\n"; }
+Ice::~Ice(void) {
+#if DEBUG
+    std::cout << "Ice destructor called\n";
+#endif
+}
 
 AMateria *Ice::clone() const { return new Ice(*this); }
 

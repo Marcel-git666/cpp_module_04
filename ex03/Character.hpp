@@ -20,3 +20,5 @@ class Character : public ICharacter {
     virtual void unequip(int idx);
     virtual void use(int idx, ICharacter &target);
 };
+
+void deleteDroppedMaterias();
