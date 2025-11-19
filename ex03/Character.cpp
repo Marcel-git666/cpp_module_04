@@ -81,6 +81,9 @@ void Character::unequip(int idx) {
         if (dropped_count < 1000) { // Kontrola, zda nepřetéká koš
             dropped_materias[dropped_count] = inventory[idx];
             dropped_count++;
+        } else {
+            std::cout << "Warning: Dropped Materia could not be saved (Floor "
+                         "full).\n";
         }
         inventory[idx] = NULL;
     }
