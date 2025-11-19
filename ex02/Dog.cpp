@@ -14,7 +14,7 @@ Dog::Dog(Dog const &other) : Animal(other) {
 }
 
 Dog &Dog::operator=(Dog const &other) {
-    std::cout << "Dog copy asignment operator called\n";
+    std::cout << "Dog copy assignment operator called\n";
     if (this != &other) {
         Animal::operator=(other);
         delete brain;

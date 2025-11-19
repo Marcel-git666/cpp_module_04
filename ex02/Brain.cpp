@@ -11,7 +11,7 @@ Brain::Brain(Brain const &other) {
 }
 
 Brain &Brain::operator=(Brain const &other) {
-    std::cout << "Brain copy asignment operator called\n";
+    std::cout << "Brain copy assignment operator called\n";
     if (this != &other) {
         for (int i = 0; i < 100; i++) {
             ideas[i] = other.ideas[i];

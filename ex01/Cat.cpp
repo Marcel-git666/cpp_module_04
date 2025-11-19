@@ -12,7 +12,7 @@ Cat::Cat(Cat const &other) : Animal(other), brain(new Brain(*other.brain)) {
 }
 
 Cat &Cat::operator=(Cat const &other) {
-    std::cout << "Cat copy asignment operator called\n";
+    std::cout << "Cat copy assignment operator called\n";
     if (this != &other) {
         Animal::operator=(other);
         delete brain;

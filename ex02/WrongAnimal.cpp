@@ -10,7 +10,7 @@ WrongAnimal::WrongAnimal(WrongAnimal const &other) : type(other.type) {
 }
 
 WrongAnimal &WrongAnimal::operator=(WrongAnimal const &other) {
-    std::cout << "WrongAnimal copy asignment operator called\n";
+    std::cout << "WrongAnimal copy assignment operator called\n";
     if (this != &other) {
         type = other.type;
     }

@@ -15,7 +15,7 @@ Animal::Animal(Animal const &other) : type(other.type) {
 }
 
 Animal &Animal::operator=(Animal const &other) {
-    std::cout << "Animal copy asignment operator called\n";
+    std::cout << "Animal copy assignment operator called\n";
     if (this != &other) {
         type = other.type;
     }

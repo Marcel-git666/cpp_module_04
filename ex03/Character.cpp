@@ -31,7 +31,7 @@ Character::Character(Character const &other)
 
 Character &Character::operator=(Character const &other) {
 #if DEBUG
-    std::cout << "Character copy asignment operator called\n";
+    std::cout << "Character copy assignment operator called\n";
 #endif
     if (this != &other) {
         name = other.name;

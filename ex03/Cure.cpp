@@ -16,7 +16,7 @@ Cure::Cure(Cure const &other) : AMateria(other) {
 
 Cure &Cure::operator=(Cure const &other) {
 #if DEBUG
-    std::cout << "Cure copy asignment operator called\n";
+    std::cout << "Cure copy assignment operator called\n";
 #endif
     if (this != &other) {
         AMateria::operator=(other);

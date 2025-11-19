@@ -26,7 +26,7 @@ MateriaSource::MateriaSource(MateriaSource const &other) {
 
 MateriaSource &MateriaSource::operator=(MateriaSource const &other) {
 #if DEBUG
-    std::cout << "MateriaSource copy asignment operator called\n";
+    std::cout << "MateriaSource copy assignment operator called\n";
 #endif
 
     if (this != &other) {

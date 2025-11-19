@@ -2,9 +2,16 @@
 
 AMateria::AMateria(void) : type("") {}
 
-AMateria::AMateria(AMateria const &other) : type(other.type) {}
+AMateria::AMateria(AMateria const &other) : type(other.type) {
+#if DEBUG
+    std::cout << "AMateria copy constructor called\n";
+#endif
+}
 
 AMateria &AMateria::operator=(AMateria const &other) {
+#if DEBUG
+    std::cout << "AMateria copy assignment operator called\n";
+#endif
     (void)other;
     return *this;
 }

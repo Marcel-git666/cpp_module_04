@@ -16,7 +16,7 @@ Ice::Ice(Ice const &other) : AMateria(other) {
 
 Ice &Ice::operator=(Ice const &other) {
 #if DEBUG
-    std::cout << "Ice copy asignment operator called\n";
+    std::cout << "Ice copy assignment operator called\n";
 #endif
     if (this != &other) {
         AMateria::operator=(other);
